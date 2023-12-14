@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Ropa Sans', sans-serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paleta {
+  color: #002142;
+  color: #052442;
+  color: #004f92;
+  color: #0059ff;
+  color: #0085ec;
+}
