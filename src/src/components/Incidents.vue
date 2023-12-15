@@ -29,11 +29,14 @@ export default {
     </div>
     <div class="main_page">
       <div class="search_container">
+        <div>Search incidents:</div>
         <div class="input_container">
           <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
           <input v-model="search_input" placeholder="Search" type="text">
         </div>
-        
+        <div class="list_container">
+
+        </div>
       </div>
       <div>dawaw</div>
     </div>
@@ -59,19 +62,21 @@ export default {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: .4rem;
+  gap: 1rem;
   height: 100%;
 }
 .search_container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  gap: .4rem;
 }
 input {
   background-color: transparent;
   border: none;
   color: white;
   font-family: 'Roboto', sans-serif;
+  width: 100%;
 }
 input:focus-visible {
   outline: none;
@@ -83,5 +88,9 @@ input:focus-visible {
   display: flex;
   align-items: center;
   gap: .4rem;
+}
+.list_container {
+  height: 100%;
+  overflow-y: scroll;
 }
 </style>

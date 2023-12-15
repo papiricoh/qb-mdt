@@ -31,7 +31,7 @@ export default {
       <div class="tab_button" style="align-self: flex-start;"><font-awesome-icon :icon="['fas', 'arrow-right-from-bracket']" /> Exit</div>
     </div>
     <div class="main_page">
-      <Incidents></Incidents>
+      <Incidents v-if="page == 'incidents'"></Incidents>
     </div>
   </main>
 </template>
