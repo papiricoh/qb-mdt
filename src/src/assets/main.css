@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 html {
   width: 100%;
   height: 100%;
-  font-family: 'Ropa Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   width: 100%;
@@ -18,9 +18,10 @@ body {
 }
 
 .paleta {
-  color: #002142;
+  color: #00152b;
   color: #052442;
   color: #004f92;
   color: #0059ff;
   color: #0085ec;
+  color: #7b8494;
 }
