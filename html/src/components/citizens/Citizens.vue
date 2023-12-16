@@ -1,5 +1,5 @@
 <script setup>
-import IncidentData from './IncidentData.vue'
+import CitizenData from './CitizenData.vue'
 </script>
 
 <script>
@@ -24,8 +24,8 @@ export default {
     }
   },
   methods: {
-    isSelected(incident) {
-      if(this.selected_citizen != null && this.selected_citizen.citizenid == incident.citizenid) {
+    isSelected(citizen) {
+      if(this.selected_citizen != null && this.selected_citizen.citizenid == citizen.citizenid) {
         return "background-color: #083664;";
       }
       return "";
@@ -59,7 +59,7 @@ export default {
         <div v-else class="empty_search"><font-awesome-icon :icon="['far', 'folder-open']" size="2xl" />No citizens</div>
       </div>
       <div v-if="selected_citizen == null" class="empty_citizen"><font-awesome-icon :icon="['fas', 'circle-question']" size="2xl" />Select a citizen</div>
-      <div v-else></div>
+      <CitizenData :citizen="selected_citizen" v-else></CitizenData>
     </div>
   </div>
 </template>
