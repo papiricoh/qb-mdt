@@ -28,8 +28,13 @@ export default {
       <div>{{ incident.user.citizenid }}</div>
     </div>
     <div class="fine_container">
-      <div v-if="incident.fine.paid">Fine paid</div>
-      <div v-else>Fine pay pending...</div>
+      <div v-if="incident.fine.paid" style="font-size: 1.2rem; font-weight: 600;">Fine paid</div>
+      <div v-else style="font-size: 1.2rem; font-weight: 600;">Fine pay pending...</div>
+      <div>Fellony list:</div>
+      <div class="fellony" v-for="fellony in incident.fine.list">
+        <div style="font-weight: 600;">{{ fellony.title }}</div>
+        <div>{{ fellony.desc }}</div>
+      </div>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <div>Quantity: ${{ incident.fine.quantity.toLocaleString() }}</div>
         <div v-if="incident.fine.prison < 60">Prison: {{ incident.fine.prison }} months</div>
@@ -112,5 +117,10 @@ export default {
 }
 .noDelete:hover {
   background-color: #052442;
+}
+.fellony {
+  background-color: #011931;
+  padding: .4rem;
+  border-radius: .4rem;
 }
 </style>

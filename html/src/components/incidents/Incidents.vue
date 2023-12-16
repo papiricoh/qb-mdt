@@ -20,8 +20,8 @@ export default {
         return
       }
       this.search_list = [
-        { id: 1, title: "Daños y prejuicios a la policia", desc: "Ha hecho daños", user: {citizenid: "23DWE23", first_name: "John", last_name: "Mclain" }, fine: { paid: true, quantity: 22000, prison: 0 }, timestamp: 10232422324 },
-        { id: 2, title: "Asesinato premeditado de Jonathan Laporta", desc: "Ataco y acabo con la vida de el ciudadano Johnathan Laporta al dia 10 de noviembre", user: {citizenid: "IOW232", first_name: "Jack", last_name: "Brown" }, fine: { paid: false, quantity: 20000, prison: 60 }, timestamp: 1021324234224 },
+        { id: 1, title: "Daños y prejuicios a la policia", desc: "Ha hecho daños", user: {citizenid: "23DWE23", first_name: "John", last_name: "Mclain" }, fine: { paid: true, quantity: 22000, prison: 0, list: [ {id: 1, title: "Example fellony", desc: "Example desc" } ] }, timestamp: 10232422324 },
+        { id: 2, title: "Asesinato premeditado de Jonathan Laporta", desc: "Ataco y acabo con la vida de el ciudadano Johnathan Laporta al dia 10 de noviembre", user: {citizenid: "IOW232", first_name: "Jack", last_name: "Brown" }, fine: { paid: false, quantity: 20000, prison: 60, list: [ {id: 1, title: "Example fellony", desc: "Example desc" }, {id: 2, title: "Example fellony2", desc: "Example desc2" } ] }, timestamp: 1021324234224 },
       ]
     }
   },
