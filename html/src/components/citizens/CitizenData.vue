@@ -38,6 +38,8 @@ export default {
   align-content: stretch;
   flex-wrap: wrap;
   gap: .8rem;
+  height: 560px;
+  overflow-y: scroll;
 }
 .name_container {
   display: flex;
