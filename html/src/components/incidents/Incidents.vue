@@ -53,7 +53,7 @@ export default {
           <div @click="selected_incident = incident" v-for="incident in search_list" :style="isSelected(incident)" class="incident_box">
             <div style="font-size: 1.2rem; font-weight: 600;">{{ incident.title }}</div>
             <div class="incident_data">
-              <div>{{ incident.user.citizenid }} - {{ incident.user.first_name + " " + incident.user.last_name }}</div>
+              <div><font-awesome-icon :icon="['far', 'id-card']" /> {{ incident.user.citizenid }} - <font-awesome-icon :icon="['fas', 'user']" /> {{ incident.user.first_name + " " + incident.user.last_name }}</div>
               <div v-if="incident.fine.paid" class="paid">Paid</div>
               <div v-else class="pending">Pending</div>
             </div>

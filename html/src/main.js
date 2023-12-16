@@ -13,6 +13,7 @@ import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
+import { faIdCard } from '@fortawesome/free-regular-svg-icons'
 
 library.add(faBookmark)
 library.add(faArrowRightFromBracket)
@@ -21,5 +22,6 @@ library.add(faMagnifyingGlass)
 library.add(faScaleBalanced)
 library.add(faUser)
 library.add(faCircleQuestion)
+library.add(faIdCard)
 library.add(faFolderOpen)
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

@@ -19,7 +19,7 @@ export default {
         return
       }
       this.search_list = [
-        { citizenid: "23DWE23", first_name: "John", last_name: "Mclain", hasWarrant: true },
+        { citizenid: "23DWE23", first_name: "John", last_name: "Mclain", hasWarrant: true, warrant: { id: 1, title: "Colosion with car hit-and runHWIAHIWHIAWHIHWIHWOAHWIand runHWIAHIWHIAWHIHWIHWOAHWIand runHWIAHIWHIAWHIHWIHWOAHWI", timestamp: 12993029 } },
       ]
     }
   },
@@ -49,9 +49,9 @@ export default {
         </div>
         <div v-if="search_list.length != 0" class="list_container">
           <div @click="selected_citizen = citizen" class="citizen_box" v-for="citizen in search_list" :style="isSelected(citizen)">
-            <div>{{ citizen.first_name }} {{ citizen.last_name }}</div>
+            <div><font-awesome-icon :icon="['fas', 'user']" /> {{ citizen.first_name }} {{ citizen.last_name }}</div>
             <div style="display: flex; align-items: center; justify-content: space-between;">
-              <div>{{ citizen.citizenid }}</div>
+              <div><font-awesome-icon :icon="['far', 'id-card']" /> {{ citizen.citizenid }}</div>
               <div v-if="citizen.hasWarrant" class="wanted">Wanted</div>
             </div>
           </div>
