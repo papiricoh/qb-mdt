@@ -11,11 +11,15 @@ import { faHandcuffs } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faBookmark)
 library.add(faArrowRightFromBracket)
 library.add(faHandcuffs)
 library.add(faMagnifyingGlass)
 library.add(faScaleBalanced)
+library.add(faUser)
+library.add(faCircleQuestion)
 library.add(faFolderOpen)
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

@@ -6,7 +6,7 @@ import Incidents from './components/Incidents.vue';
 export default {
   data() {
     return {
-      page: "incidents",
+      page: "citicens",
     }
   }
 }
@@ -18,6 +18,8 @@ export default {
       <div class="tab_list">
         <img style="align-self: center;" class="logo" src="https://pbs.twimg.com/profile_images/1433549822624100404/p5gTDCOj_400x400.png">
 
+        <div v-if="page == 'citicens'" class="tab_button active_tab"><font-awesome-icon :icon="['fas', 'user']" /> Citizens</div>
+        <div @click="page = 'citicens'" v-else class="tab_button"><font-awesome-icon :icon="['fas', 'user']" /> Citizens</div>
         <div v-if="page == 'incidents'" class="tab_button active_tab"><font-awesome-icon :icon="['fas', 'bookmark']" /> Incidents</div>
         <div @click="page = 'incidents'" v-else class="tab_button"><font-awesome-icon :icon="['fas', 'bookmark']" /> Incidents</div>
         <div v-if="page == 'evidences'" class="tab_button active_tab"><font-awesome-icon :icon="['far', 'folder-open']" /> Evidences</div>
@@ -47,6 +49,8 @@ main {
   display: grid;
   grid-template-columns: 10rem 8fr;
   padding: 1rem;
+  margin: 4rem;
+  box-sizing: border-box;
 }
 .header {
   padding: 1rem;
