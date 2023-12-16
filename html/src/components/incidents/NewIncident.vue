@@ -1,5 +1,5 @@
 <script setup>
-import IncidentData from './IncidentData.vue'
+
 </script>
 
 <script>
@@ -31,9 +31,6 @@ export default {
         return "background-color: #083664;";
       }
       return "";
-    },
-    newIncident() {
-      this.$emit('newIncident');
     }
   }
 }
@@ -46,7 +43,7 @@ export default {
         <div style="font-size: 2rem; font-weight: bold;">Incidents</div>
         <div>Search for incidents by citizen</div>
       </div>
-      <div class="incident_button" @click="newIncident()">New Incident</div>
+      <div class="incident_button">New Incident</div>
     </div>
     <div class="main_page">
       <div class="search_container">

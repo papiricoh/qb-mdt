@@ -1,6 +1,7 @@
 <script setup>
 import Incidents from './components/incidents/Incidents.vue';
 import Citizens from './components/citizens/Citizens.vue';
+import NewIncident from './components/incidents/NewIncident.vue';
 </script>
 
 <script>
@@ -34,8 +35,9 @@ export default {
       <div class="tab_button" style="align-self: flex-start;"><font-awesome-icon :icon="['fas', 'arrow-right-from-bracket']" /> Exit</div>
     </div>
     <div class="main_page">
-      <Incidents v-if="page == 'incidents'"></Incidents>
+      <Incidents @newIncident="page = 'newIncident'" v-if="page == 'incidents'"></Incidents>
       <Citizens v-if="page == 'citizens'"></Citizens>
+      <NewIncident v-if="page == 'newIncident'"></NewIncident>
     </div>
   </main>
 </template>
