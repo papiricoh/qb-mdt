@@ -1,12 +1,13 @@
 <script setup>
-import Incidents from './components/Incidents.vue';
+import Incidents from './components/incidents/Incidents.vue';
+import Citizens from './components/citizens/Citizens.vue';
 </script>
 
 <script>
 export default {
   data() {
     return {
-      page: "citicens",
+      page: "citizens",
     }
   }
 }
@@ -18,8 +19,8 @@ export default {
       <div class="tab_list">
         <img style="align-self: center;" class="logo" src="https://pbs.twimg.com/profile_images/1433549822624100404/p5gTDCOj_400x400.png">
 
-        <div v-if="page == 'citicens'" class="tab_button active_tab"><font-awesome-icon :icon="['fas', 'user']" /> Citizens</div>
-        <div @click="page = 'citicens'" v-else class="tab_button"><font-awesome-icon :icon="['fas', 'user']" /> Citizens</div>
+        <div v-if="page == 'citizens'" class="tab_button active_tab"><font-awesome-icon :icon="['fas', 'user']" /> Citizens</div>
+        <div @click="page = 'citizens'" v-else class="tab_button"><font-awesome-icon :icon="['fas', 'user']" /> Citizens</div>
         <div v-if="page == 'incidents'" class="tab_button active_tab"><font-awesome-icon :icon="['fas', 'bookmark']" /> Incidents</div>
         <div @click="page = 'incidents'" v-else class="tab_button"><font-awesome-icon :icon="['fas', 'bookmark']" /> Incidents</div>
         <div v-if="page == 'evidences'" class="tab_button active_tab"><font-awesome-icon :icon="['far', 'folder-open']" /> Evidences</div>
@@ -34,6 +35,7 @@ export default {
     </div>
     <div class="main_page">
       <Incidents v-if="page == 'incidents'"></Incidents>
+      <Citizens v-if="page == 'citizens'"></Citizens>
     </div>
   </main>
 </template>
